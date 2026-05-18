@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>ENC App</title></head>
+<body>
+<p>Connecting to ENC Field App...</p>
+<script>
+  var p = new URLSearchParams(location.search);
+  var code = p.get('code'), state = p.get('state');
+  if (code && state) location.href = decodeURIComponent(state) + '?code=' + encodeURIComponent(code);
+</script>
+</body>
+</html>
